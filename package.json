@@ -1,0 +1,26 @@
+{
+  "name": "t3iiw1-intro-to-mongoose",
+  "version": "1.0.0",
+  "description": "- MongooseJS\r mongosh - mongo shell\r mongod - Mongo service daemon\r mongos - sharding or clustering for mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeZHar/t3iiw1-intro-to-mongoose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LukeZHar/t3iiw1-intro-to-mongoose/issues"
+  },
+  "homepage": "https://github.com/LukeZHar/t3iiw1-intro-to-mongoose#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1"
+  }
+}

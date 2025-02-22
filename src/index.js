@@ -7,12 +7,15 @@
 
 // Server is configured in this file
 const { app } = require("./server.js");
+const { dbConnect } = require("./utils/database.js");
 
 // Get the PORT
 const PORT = process.env.PORT || 3000;
 
 // Start the server 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     // Server is running
+    await dbConnect();
+
     console.log(`Server running on port: ${PORT}`);
 });

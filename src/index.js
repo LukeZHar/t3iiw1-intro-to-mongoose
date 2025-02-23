@@ -1,23 +1,29 @@
-// Purpose of this file 
+// Purpose of this file
 
 // First point of entry
 // Initialise the server
 // Get the port
-// Tell the server to listen to incoming traffic 
+// Tell the server to listen to incoming traffic
 
 // Server is configured in this file
+
 require("dotenv").config();
 
 const { app } = require("./server.js");
 const { dbConnect } = require("./utils/database.js");
 
 // Get the PORT
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8008;
 
-// Start the server 
+// Listen to the PORT
+
+// dbConnect().then(()=>{
+//     app.listen();
+// })
+
 app.listen(PORT, async () => {
-    // Server is running
+    // Server is running at this point
     await dbConnect();
 
-    console.log(`Server running on port: ${PORT}`);
+    console.log("Server is running on port: " + PORT);
 });

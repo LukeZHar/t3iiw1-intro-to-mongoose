@@ -1,47 +1,39 @@
 // Provide CRUD functionality for the PostModel
 
-const { PostModel } = require("../models/PostModel");
+const { PostModel } = require("../models/PostModel")
 
-async function createPost(title, content) {
+async function createPost(title, content = null, authorId) {
     let result = await PostModel.create({
         title: title,
-        content: content
-        // date: Date.now() - Has a default value
+        content: content,
+        author: authorId
+        // Date has a default value
     });
 
     return result;
 }
 
-async function getPost(req, res) {
-    
+async function getPost(query) {
+    // let result = await PostModel.findOne({key: value})
+    let result = await PostModel.findOne(query).populate("author");
+
+    return result;
 }
 
-async function getPosts(req, res) {
-    
+async function getPosts(query) {
+    let result = await PostModel.find(query);
+
+    return result;
 }
 
-async function updatePost(req, res) {
-    
-}
+async function updatePost() {}
 
-async function updatePosts(req, res) {
-    
-}
+async function updatePosts() {}
 
-async function deletePost(req, res) {
-    
-}
+async function deletePost() {}
 
-async function deletePosts(req, res) {
-    
-}
+async function deletePosts() {}
 
 module.exports = {
-    createPost,
-    getPost,
-    getPosts,
-    updatePost,
-    updatePosts,
-    deletePost,
-    deletePosts
+    createPost, getPost, getPosts, updatePost, updatePosts, deletePost, deletePosts
 }

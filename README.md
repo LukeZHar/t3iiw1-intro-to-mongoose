@@ -1,9 +1,9 @@
 # t3iiw1-intro-to-mongoose
 
 - MongooseJS
-mongosh - mongo shell
-mongod - Mongo service daemon
-mongos - sharding or clustering for mongodb
+mongosh - mongo shell  
+mongod - Mongo service daemon  
+mongos - sharding or clustering for mongodb  
 
 - Start MongoDB server
 sudo service mongod start 
@@ -16,5 +16,9 @@ sudo service mongod restart
 2. Open the MongoDB shell: `mongosh`
 3. Show the list of databases: `show dbs`
 4. Connect to a database: `use dbname`
+5. `db.posts.find`
 
-
+Saturday:
+Use MongoDB in Express Route
+Document Referencing and Populating
+Subdocuments

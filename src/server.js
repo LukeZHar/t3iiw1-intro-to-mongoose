@@ -1,7 +1,5 @@
 // Purpose:
-
 // Configure the server
-
 // Defining routes, middlewares, CORS, debug logger setups, db connections, etc.
 
 const express = require("express");

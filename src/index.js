@@ -6,6 +6,8 @@
 // Tell the server to listen to incoming traffic 
 
 // Server is configured in this file
+require("dotenv").config();
+
 const { app } = require("./server.js");
 const { dbConnect } = require("./utils/database.js");
 
